@@ -1,0 +1,6 @@
+manual implementation of the LBPH algorithm not calling OpenCV's high-level functions [cv2.face.LBPHFaceRecognizer_create()]
+
+compute_lbp() function for pixel comparisons
+lbph_features() to split the image and compute histograms
+saved custom (label, feature_vector) pairs to a .npy file
+compared new face vectors using Euclidean distance manually

@@ -1,0 +1,197 @@
+.LoginContainer{
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background-color:rgb(255, 255, 255);
+  height: 550px;
+  width: 850px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.LoginRight{
+ background-color: #7A67A9;
+ width: 50%;
+ border-radius: 0 130px 130px 0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition: width 500ms ease-in-out;
+
+}
+.LoginRightInitial{
+ background-color: #7A67A9;
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition: 500ms ease-in-out;
+
+}
+.LoginLeftInitial{
+   width: 0%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 12px;
+   transition: 500ms ease-in-out;
+   overflow: hidden; 
+}
+.LoginTextsInitial{
+ position: relative;
+ right: 550px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ margin: 0px;
+ padding: 0px;
+ gap: 8px;
+ transition: 500ms ease-in-out;
+}
+.LoginRightClicked{
+ background-color: #7A67A9;
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition: 500ms ease-in-out;
+}
+
+.LoginLeftClicked{
+   width: 0%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 12px;
+   transition: 500ms ease-in-out;
+   overflow: hidden; 
+}
+.LoginTextsClicked{
+  position: relative;
+ right: 550px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ margin: 0px;
+ padding: 0px;
+ gap: 8px;
+ transition: 500ms ease-in-out;
+}
+
+.LoginTexts{
+ position: relative;
+ right: 0;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ margin: 0px;
+ padding: 0px;
+ gap: 8px;
+ transition: 500ms ease-in-out;
+}
+
+.LoginHeading{
+  font-family: Lato;
+  color: whitesmoke;
+  margin: 0px;
+}
+
+.LoginBreadcrumb{
+  font-family: Lato;
+  color: whitesmoke;
+}
+
+.LoginRegisterButton{
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: transparent;
+  letter-spacing: 1px;
+  font-family:Lato;
+  font-weight:600;
+  color: white;
+}
+
+.LoginLeft{
+   width: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 12px;
+   transition: width 500ms ease-in-out;
+}
+
+.LoginDatas{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 15px;
+  gap: 35px;
+  height: 350px;
+  width: 100%;
+}
+.LoginHeading-2{
+  font-family: Lato;
+  margin: 0px;
+}
+.LoginUsername{
+  height: 35px;
+  background-color:#E8F0FE;
+  width: 80%;
+  border: 0px;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.LoginUsername:focus{
+  outline: 0px;
+}
+
+.LoginPassword:focus{
+  outline: 0px;
+}
+
+.LoginPassword{
+  height: 35px;
+  background-color:#E8F0FE;
+  width: 80%;
+  border: 0px;
+  border-radius: 10px;
+  padding-left: 10px;
+   font-size: 15px;
+}
+
+.LoginForgotPassword{
+  color: gray;
+  font-style: normal;
+   text-decoration: none;
+   font-family: lato;
+}
+
+.LoginForgotPassword:hover{
+  color: blue;
+}
+
+.LoginButton{
+  width: 80%;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  border: 0px;
+  font-family: lato;
+  font-weight: bold;
+  color:white;
+  background-color: #7A67A9;
+  border-radius: 10px;
+   font-size: 15px;
+   letter-spacing: 1px;
+}

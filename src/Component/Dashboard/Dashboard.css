@@ -1,0 +1,132 @@
+
+.dashboard-container{
+    padding: 20px;
+    width: 20%;
+    height: calc(100vh - 42px);
+    /* border: 2px solid; */
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* margin-left: 5px; */
+    /* margin-top: 5px; */
+    background-color: #2C2C2C;
+    color: #e0e1dd;
+    font-family: "Poppins", sans-serif;
+    transition: all 700ms ease-in-out;
+    position: relative;
+    left: 0;
+    z-index: 20;
+}
+/* .open{
+     opacity: 0;
+  animation: showUp 1s forwards;
+  animation-delay: 10s;
+    transition: all 700ms ease-in-out; 
+}
+@keyframes showUp {
+  to {
+    opacity: 1;
+  }
+} */
+.dashboard-Drop{
+    position: relative;
+    left: -100%;
+    transition: all 700ms ease-in-out;
+        padding: 20px;
+    width: 20%;
+    height: calc(100vh - 42px);
+     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+        background-color: #324862;
+    color: #e0e1dd;
+    font-family: "Poppins", sans-serif;
+    z-index: 20;
+}
+.dashboard-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.dashboard-logo-title{
+    display: flex;
+    gap:1.25rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+.dashboard-logo{
+    height: 42px;
+    /* width: px; */
+    /* background-color: #415a77; */
+    /* border-radius: 50%; */
+    /* background-color: #cacfd6; */
+}
+.dashboard-title{
+    padding-top: 11px;
+}
+.dashboard-dropdown{
+    cursor: pointer;
+}
+.dashboard-line{
+    height:2px;
+    width:100%;
+    margin: 20px;
+    margin-left: 0px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+}
+.dashboard-center{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    height: 280px;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.dashboard-menu{
+    display: flex;
+    gap: 1rem;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+}
+.dashboard-menu:hover{
+    text-decoration: underline;
+}
+.dashboard-bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    font-size: 18px;
+}
+.dashboard-profile {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid white;
+  overflow: hidden; /* Important to clip overflow */
+  background-color: white;
+}
+
+.dashboard-logout{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* padding-left: 15px; */
+    padding-right: 15px;
+    /* background-color: #FF0033; */
+    border: 0px;
+    width: auto;
+    height: 4rem;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.dashboard-logout:hover{
+    color: red;
+}
+.dashboard-logout i{
+    margin-right: 10px;
+}

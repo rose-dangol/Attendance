@@ -1,0 +1,201 @@
+.RegisterContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  height: 550px;
+  width: 850px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.RegisterRight {
+  background-color: #7a67a9;
+  width: 50%;
+  border-radius: 130px 0 0 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 500ms ease-in-out;
+}
+
+.RegisterRightClicked {
+  background-color: #7a67a9;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 500ms ease-in-out;
+}
+
+.RegisterLeftClicked {
+  width: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: 500ms ease-in-out;
+}
+.RegisterRightInitial {
+ background-color: #7a67a9;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 500ms ease-in-out;
+}
+
+.RegisterLeftInitial {
+  width: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.RegisterTextsInitial{
+  position: relative;
+  left: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+  gap: 8px;
+  transition: 500ms ease-in-out;
+}
+
+.RegisterTextsClicked {
+  position: relative;
+  left: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+  gap: 8px;
+  transition: 500ms ease-in-out;
+}
+
+.RegisterLeft {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: 500ms ease-in-out;
+}
+
+.RegisterDatas {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 15px;
+  gap: 35px;
+  height: 350px;
+  width: 100%;
+}
+
+.RegisterHeading-2 {
+  font-family: Lato;
+  margin: 0px;
+}
+
+.RegisterUsername {
+  height: 35px;
+  background-color: #e8f0fe;
+  width: 80%;
+  border: 0px;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.RegisterUsername:focus {
+  outline: 0px;
+}
+
+.RegisterPassword {
+  height: 35px;
+  background-color: #e8f0fe;
+  width: 80%;
+  border: 0px;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.RegisterPassword:focus {
+  outline: 0px;
+}
+
+.RegisterEmail:focus {
+  outline: 0px;
+}
+
+.RegisterEmail {
+  height: 35px;
+  background-color: #e8f0fe;
+  width: 80%;
+  border: 0px;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.RegisterButton {
+  width: 80%;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  border: 0px;
+  font-family: lato;
+  font-weight: bold;
+  color: white;
+  background-color: #7a67a9;
+  border-radius: 10px;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.RegisterTexts {
+  position: relative;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+  gap: 8px;
+  transition: 500ms ease-in-out;
+}
+
+.RegisterHeading {
+  font-family: Lato;
+  color: whitesmoke;
+  margin: 0px;
+}
+
+.RegisterBreadcrumb {
+  font-family: Lato;
+  color: whitesmoke;
+}
+
+.RegisterLoginButton {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: transparent;
+  letter-spacing: 1px;
+  font-family: Lato;
+  font-weight: 600;
+  color: white;
+}
