@@ -45,7 +45,7 @@ const Login = () => {
             placeholder="Password"
           />
           <Link to="" className="LoginForgotPassword">Forgot Password?</Link>
-          <Link to="/" className="LoginButton">Login</Link>
+          <Link to="" className="LoginButton">Login</Link>
           {/* <button className="LoginButton">Login</button> */}
         </div>
       </div>
