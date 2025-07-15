@@ -111,8 +111,10 @@
   background-color: #e8f0fe;
   width: 80%;
   border: 0px;
-  border-radius: 10px;
-  padding-left: 10px;
+  border-radius: 15px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
   font-size: 15px;
 }
 

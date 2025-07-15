@@ -1,3 +1,5 @@
+// "If someone tries to register, here's what we check, save, or return."
+
 import User from "../models/User.js"
 import bcrypt from 'bcrypt'
 
@@ -24,6 +26,7 @@ export const register = async (req, res) => {
 };
 
 export const login = async(req,res) => {
+  console.log("Login route hit ✅");
   try{
     const username= req.body.username;
     const validation = await User.findOne({username:username});
@@ -38,4 +41,20 @@ export const login = async(req,res) => {
   }catch(err){
     return res.status(500).send(err)
   }
+}
+export const deleteUser = async (req, res) => {
+    try{
+        const deleteID = req.body.id;
+        // const userExist = await User.findOne({_id:deleteID});
+        const userExist = await User.findById(deleteID)
+        if(!userExist){
+            return res.status(404).send("User not found")
+        }
+        // await User.deleteOne({id:deleteID});
+        await userExist.deleteOne();
+        return res.status(111).send("User deleted")
+    }catch(e){
+        return res.status(404).send("User not deleted")
+    }
+
 }

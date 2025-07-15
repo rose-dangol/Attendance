@@ -1,3 +1,5 @@
+// "this is where I tell my app how to talk to the database"
+
 import mongoose from "mongoose";
 
 const connectDB = async () => {

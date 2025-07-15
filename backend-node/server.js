@@ -1,3 +1,5 @@
+// This is where everything begins, and we tell the app to start listening and using our DB + routes."
+
 import userRouter from '../backend-node/routes/auth.js'
 import express from "express";
 import connectDB from './config/db.js';

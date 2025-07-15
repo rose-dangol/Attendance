@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import "./Register.css";
 import axios from "axios";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -25,43 +25,66 @@ const Register = () => {
     }, 500);
   };
 
-  const [formData, setFormData] = useState({
-    fullName: "",
-    username: "",
-    email: "",
-    password: "",
-  });
+  // const [formData, setFormData] = useState({
+  //   fullName: "",
+  //   username: "",
+  //   email: "",
+  //   password: "",
+  // });
 
-  const handleChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
+  // const handleChange = (e) => {
+  //   setFormData((prev) => ({
+  //     ...prev,
+  //     [e.target.name]: e.target.value,
+  //   }));
+  // };
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const res = await axios.post("http://localhost:5000/api/auth/register", formData);
+  //     alert(res.data.message);
+  //     navigate("/login");
+  //   } catch (err) {
+  //     alert(err.response?.data?.message || "Something went wrong");
+  //   }
+  // };
   const handleSubmit = async (e) => {
-    e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", formData);
-      alert(res.data.message);
-      navigate("/login");
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const userData = {
+        fullName: formData.get("fullName"),
+        username: formData.get("username"),
+        email: formData.get("email"),
+        password: formData.get("password"),
+      };
+      const res = await axios.post("http://localhost:5000/api/auth/register", userData);
+      console.log(res.data);
+      navigate('/login')
     } catch (err) {
-      alert(err.response?.data?.message || "Something went wrong");
+      console.log(err.message);
     }
   };
 
   return (
-    <div className='RegisterContainer'>
-      <div className={!loaded ? "RegisterLeftInitial" : clicked ? "RegisterLeftClicked" : "RegisterLeft"}>
-        <form className="RegisterDatas" onSubmit={handleSubmit}>
+    <div className="RegisterContainer">
+      <div
+        className={
+          !loaded
+            ? "RegisterLeftInitial"
+            : clicked
+            ? "RegisterLeftClicked"
+            : "RegisterLeft"
+        }
+      >
+        <form className="RegisterDatas" onSubmit={(e) => handleSubmit(e)}>
           <h1 className="RegisterHeading-2">Registration</h1>
           <input
             type="text"
             name="fullName"
             className="RegisterUsername"
             placeholder="Full Name"
-            value={formData.fullName}
-            onChange={handleChange}
             required
           />
           <input
@@ -69,37 +92,51 @@ const Register = () => {
             name="username"
             className="RegisterUsername"
             placeholder="Username"
-            value={formData.username}
-            onChange={handleChange}
             required
           />
           <input
             type="email"
             name="email"
-            className="RegisterEmail"
+            className="RegisterUsername"
             placeholder="Email"
-            value={formData.email}
-            onChange={handleChange}
             required
           />
           <input
             type="password"
             name="password"
-            className="RegisterPassword"
+            className="RegisterUsername"
             placeholder="Password"
-            value={formData.password}
-            onChange={handleChange}
             required
           />
-          <button type="submit" className="RegisterButton">Register</button>
+          <button type="submit" className="RegisterButton">
+            Register
+          </button>
         </form>
       </div>
 
-      <div className={!loaded ? "RegisterRightInitial" : clicked ? "RegisterRightClicked" : "RegisterRight"}>
-        <div className={!loaded ? "RegisterTextsInitial" : clicked ? "RegisterTextsClicked" : "RegisterTexts"}>
+      <div
+        className={
+          !loaded
+            ? "RegisterRightInitial"
+            : clicked
+            ? "RegisterRightClicked"
+            : "RegisterRight"
+        }
+      >
+        <div
+          className={
+            !loaded
+              ? "RegisterTextsInitial"
+              : clicked
+              ? "RegisterTextsClicked"
+              : "RegisterTexts"
+          }
+        >
           <h1 className="RegisterHeading">Welcome Back!</h1>
           <p className="RegisterBreadcrumb">Already have an account?</p>
-          <button className="RegisterLoginButton" onClick={handleClick}>Login</button>
+          <button className="RegisterLoginButton" onClick={handleClick}>
+            Login
+          </button>
         </div>
       </div>
     </div>
@@ -107,37 +144,6 @@ const Register = () => {
 };
 
 export default Register;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import React, { useEffect, useState } from 'react'
 // import "./Register.css"
@@ -204,7 +210,7 @@ export default Register;
 //         </div>
 
 //       </div>
-      
+
 //     </div>
 //   )
 // }
