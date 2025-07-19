@@ -21,6 +21,7 @@ app.use(express.json());
 
 // Routes
 app.use("/api/auth", userRouter);
+// app.use("/api/allStudent", userRouter)
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

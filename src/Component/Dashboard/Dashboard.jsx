@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 // import logo from "../../images/logo.png";
 // import lady from "../../images/lady.png";
@@ -17,6 +17,7 @@ import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArro
 const Dashboard = () => {
   const [drop, setDrop] = useState(false);
   const [arrow, setArrow] = useState(false);
+  const navigate = useNavigate();
   const dropClicked = (e) => {
     setDrop(false);
     setArrow(false);
@@ -32,6 +33,11 @@ const Dashboard = () => {
   const routeLogin = () => {
     navigate("/login");
   };
+  const handleLogout = (e) =>{
+    e.preventDefault();
+    localStorage.clear("userDatas");
+    navigate("/login")
+  }
   return (
     <>
       {arrow ? (
@@ -108,9 +114,9 @@ const Dashboard = () => {
             />
           </div>
           {/* <Link></Link> */}
-          <Link to="../Login" className="dashboard-logout">
-            <i class="fa-solid fa-arrow-right-from-bracket"></i> LogOut
-          </Link>
+          <div className="dashboard-logout" onClick={(e)=>handleLogout(e)}>
+            <i className="fa-solid fa-arrow-right-from-bracket"></i> LogOut
+          </div>
           {/* <button className="dashboard-logout">
             <a href="./Login">
               <i class="fa-solid fa-arrow-right-from-bracket"></i> LogOut
