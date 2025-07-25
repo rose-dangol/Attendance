@@ -8,6 +8,7 @@ const Login = () => {
   const navigate = useNavigate();
   const [loaded, setLoaded] = useState(false);
   const [clicked, Setclicked] = useState(false);
+  const [user,setUser] = useState()
 
   const PageLoaded = () => {
     setTimeout(() => {
@@ -38,12 +39,16 @@ const Login = () => {
         "http://localhost:5000/api/auth/login",
         loginData
       );
-      const userData = JSON.stringify(res.data); // now it's initialized
-      await localStorage.setItem("userData", userData);
-      // console.log(userData);
-
-      // console.log(res.data);
-      navigate("/");
+      try {
+        const userData = JSON.stringify(res.data); // now it's initialized
+        localStorage.setItem("userData", userData);
+        console.log(userData);
+        navigate("/");
+        // setUser(userData)
+        window.location.reload();
+      } catch (e) {
+        console.log(e);
+      }
     } catch (error) {
       console.log(error.message);
     }

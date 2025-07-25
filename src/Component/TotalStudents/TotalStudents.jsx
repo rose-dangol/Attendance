@@ -13,7 +13,7 @@ const [students, setStudents] = useState([]);
       }
     };
     fetchStudents();
-  }, []);
+  }, [students]);
   return (
     <div>
       <h2>Registered Students</h2>

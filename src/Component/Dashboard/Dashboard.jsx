@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Dashboard.css";
-// import logo from "../../images/logo.png";
-// import lady from "../../images/lady.png";
+import axios from "axios";
 
 // menu icons
 import HomeIcon from "@mui/icons-material/Home";
@@ -17,7 +16,9 @@ import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArro
 const Dashboard = () => {
   const [drop, setDrop] = useState(false);
   const [arrow, setArrow] = useState(false);
+  const [loggedUser, setLoggedUSer] = useState();
   const navigate = useNavigate();
+
   const dropClicked = (e) => {
     setDrop(false);
     setArrow(false);
@@ -33,11 +34,25 @@ const Dashboard = () => {
   const routeLogin = () => {
     navigate("/login");
   };
-  const handleLogout = (e) =>{
+  const handleLogout = (e) => {
     e.preventDefault();
-    localStorage.clear("userDatas");
-    navigate("/login")
-  }
+    localStorage.removeItem("userData");
+    navigate("/login");
+  };
+  // const userData = JSON.parse(localStorage.getItem("userData"));
+  //   if(userData){
+  //     setLoggedUSer(userData.fullName);
+  //   }
+  //     console.log(loggedUSer);
+  useEffect(() => {
+    const userData = JSON.parse(localStorage.getItem("userData"));
+    if (userData && userData.fullName) {
+      setLoggedUSer(userData.fullName);
+      // console.log(userData);
+      setTimeout(() => console.log(userData.fullName), 500);
+    }
+  }, []);
+
   return (
     <>
       {arrow ? (
@@ -51,17 +66,16 @@ const Dashboard = () => {
       <div className={drop ? "dashboard-Drop" : "dashboard-container"}>
         <div className="dashboard-wrapper">
           <div className="dashboard-top">
-            <div className="dashboard-logo-title">
               <div className="dashboard-logo">
                 <img
-                  src={"/images/logo.png"}
+                  src={"/images/logo1.png"}
                   alt="Logo"
-                  style={{ height: "62px", width: "70px" }}
+                  style={{ height: "60px", width: "70px" }}
                 />
               </div>
-              <div className="dashboard-title">Attendify</div>
-            </div>
-            <div
+              <div className="dashboard-title">ATTENDIFY</div>
+      
+            {/* <div
               className="dashboard-dropdown"
               onClick={(e) => {
                 setTimeout(() => {
@@ -70,7 +84,7 @@ const Dashboard = () => {
               }}
             >
               <KeyboardDoubleArrowLeftIcon style={{ fontSize: 30 }} />
-            </div>
+            </div> */}
           </div>
           <div className="dashboard-line"></div>
           <div className="dashboard-center">
@@ -101,20 +115,25 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="dashboard-bottom">
-          <div className="dashboard-profile">
-            <img
-              src={"/images/lady.png"}
-              alt="Logo"
-              style={{
-                height: "100%",
-                width: "100%",
-                objectFit: "cover", // Apply here
-                borderRadius: "50%", // Make image circular too
-              }}
-            />
-          </div>
+          {/* <div className="dashboard-profile">
+            <div className="dashboard-profile-image">
+              <img
+                src={"/images/lady.png"}
+                alt="Logo"
+                style={{
+                  height: "100%",
+                  width: "100%",
+                  objectFit: "cover",
+                  borderRadius: "50%",
+                }}
+              />
+            </div>
+            <div className="dashboard-profile-username">
+              <p>{loggedUser || "Fullname"}</p>
+            </div>
+          </div> */}
           {/* <Link></Link> */}
-          <div className="dashboard-logout" onClick={(e)=>handleLogout(e)}>
+          <div className="dashboard-logout" onClick={(e) => handleLogout(e)}>
             <i className="fa-solid fa-arrow-right-from-bracket"></i> LogOut
           </div>
           {/* <button className="dashboard-logout">
