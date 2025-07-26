@@ -1,5 +1,6 @@
 * {
   /* box-sizing: border-box; */
+  /* font-family: sans-serif; */
 }
 
 .take-attendance-container {
@@ -33,6 +34,7 @@
   padding: 15px;
 }
 .section-heading {
+  font-family: "Poppins", sans-serif;
   font-weight: bolder;
   font-size: 32.3px;
 }
@@ -100,8 +102,8 @@
   gap: 0.7rem;
   padding: 18px;
   border-radius: 18px;
+  cursor: pointer;
 }
-
 .subtext-section {
   display: flex;
   gap: 1.3rem;
@@ -112,6 +114,7 @@
   justify-content: center;
   align-items: center;
   gap: 0.1rem;
+  font-family: "Poppins", sans-serif;
 }
 .right-container {
   /* background-color: blue; */
@@ -133,5 +136,66 @@
   padding: 10px;
 }
 .right-gif{
-
+  border-radius: 20px;
 }
+.right-userDetails{
+  padding: 10px;
+  margin-top: 10px;
+  /* border: 2px dotted red; */
+  height: 95px;
+  /* margin-right: auto; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: .5rem;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  /* width: 275px; */
+  position: relative;
+  right: 65px;
+  overflow: hidden;
+  /* white-space:nowrap; */
+  /* left: 0; */
+  /* left: -100%; */
+}
+
+
+.typing-text {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid black;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  animation: typing 2s steps(60, end) forwards, blink 0.7s step-end infinite;
+  line-height: 2.1;
+  font-weight: bold;
+  font-size: 16px;
+  /* padding-bottom: 4px; */
+}
+
+.typing-delay-1 {
+  animation-delay: 0s;
+  color: #140E32;
+}
+
+/* .typing-delay-2 {
+  animation-delay: 2.2s;
+  color: green;
+}
+
+.typing-delay-3 {
+  animation-delay: 4.4s;
+  color: blue;
+} */
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 200px; } 
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: rgb(255, 255, 255); }
+}
+
+

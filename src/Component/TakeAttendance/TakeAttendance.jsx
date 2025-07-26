@@ -111,14 +111,23 @@ const TakeAttendance = () => {
             </div>
 
             <div className="right-container">
-              <div className="howto-title">Something...</div>
-<div className="right-gif">
-  <img 
-    src="/gifs/ho-to-video.gif" 
-    alt="My GIF" 
-    style={{ width: '350px', height: '275px' }} 
-  />
-</div>
+              <div className="howto-title">...</div>
+              <div className="right-gif">
+                <img
+                  src="/gifs/ho-to-video.gif"
+                  alt="My GIF"
+                  style={{
+                    width: "350px",
+                    height: "275px",
+                    borderRadius: "15px",
+                  }}
+                />
+              </div>
+              <div className="right-userDetails">
+                <div className="username typing-text typing-delay-1">User: Rose Dangol <br/>Email: rose@gmail.com <br/> User ID: 28684</div>
+                {/* <div className="gmail typing-text typing-delay-2">Email: rose@gmail.com</div>
+                <div className="userid typing-text typing-delay-3">User ID: 28684</div> */}
+              </div>
             </div>
           </div>
         </div>
