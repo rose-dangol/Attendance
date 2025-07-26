@@ -42,7 +42,7 @@
     justify-content: space-between;
     align-items:center;
     /* margin-bottom:20px; */
-    height: 90px;
+    height: 85px;
 }
 .dashboard-logo-title{
     display: flex;
@@ -60,10 +60,10 @@
     /* background-color: #cacfd6; */
 }
 .dashboard-title{
-    /* padding-top: 11px; */
+    padding-top: 9px;
     font-weight: bold;
     font-size: 25.3px;
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
 }
 .dashboard-dropdown{
     cursor: pointer;

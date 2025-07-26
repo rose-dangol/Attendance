@@ -86,6 +86,9 @@ const Home = () => {
               <div className="stats-box-title">Productivity</div>
             </div>
           </div>
+          <div className="center-bargraph">
+            
+          </div>
         </div>
       </div>
     </div>

@@ -68,9 +68,9 @@ const Dashboard = () => {
           <div className="dashboard-top">
               <div className="dashboard-logo">
                 <img
-                  src={"/images/logo1.png"}
+                  src={"/images/logoBlack1.png"}
                   alt="Logo"
-                  style={{ height: "60px", width: "70px" }}
+                  style={{ height: "58px", width: "70px" }}
                 />
               </div>
               <div className="dashboard-title">ATTENDIFY</div>
@@ -98,7 +98,7 @@ const Dashboard = () => {
               <div className="dashboard-icon">
                 <AddAPhotoIcon />
               </div>
-              <div className="dashboard-menu-data">Take Attendance</div>
+              <div className="dashboard-menu-data"><Link to="/TakeAttendance">Take Attendance</Link></div>
             </div>
             <div className="dashboard-menu">
               <div className="dashboard-icon">
