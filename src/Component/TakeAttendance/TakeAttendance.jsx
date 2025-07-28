@@ -5,6 +5,7 @@ import Dashboard from "../Dashboard/Dashboard";
 import CameraAltOutlinedIcon from "@mui/icons-material/CameraAltOutlined";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import BoltOutlinedIcon from "@mui/icons-material/BoltOutlined";
+import CameraEnhanceOutlinedIcon from '@mui/icons-material/CameraEnhanceOutlined';
 
 const TakeAttendance = () => {
   const [hasCamera, setHasCamera] = useState(null);
@@ -79,7 +80,7 @@ const TakeAttendance = () => {
                   className="take-attendance-btn"
                   onClick={handleTakeAttendanceClick}
                 >
-                  <CameraAltOutlinedIcon sx={{ fontSize: 28 }} /> Take
+                  <CameraEnhanceOutlinedIcon sx={{ fontSize: 28 }} /> Take
                   Attendance
                 </div>
                 {/* Camera preview */}
