@@ -104,7 +104,7 @@ const Dashboard = () => {
               <div className="dashboard-icon">
                 <ReceiptLongIcon />
               </div>
-              <div className="dashboard-menu-data">Attendance Log</div>
+              <div className="dashboard-menu-data"><Link to="/logAdmin">Attendance Log</Link></div>
             </div>
             <div className="dashboard-menu">
               <div className="dashboard-icon">

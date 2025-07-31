@@ -8,7 +8,9 @@ import AdminDashboard from "./Component/AdminDashboard/AdminDashboard";
 import TotalStudents from "./Component/TotalStudents/TotalStudents";
 import TopNavbar from "./Component/TopNavbar/TopNavbar";
 import TakeAttendance from "./Component/TakeAttendance/TakeAttendance";
-import CameraTest from "./Component/CameraTest/CameraTest"
+import CameraTest from "./Component/CameraTest/CameraTest";
+import LogAdmin from "./Component/LogAdmin/LogAdmin";
+import LogTableContent from "./Component/LogTableContent/LogTableContent";
 const App = () => {
   // const [userData, setUserData] = useState(
   //   () => JSON.parse(localStorage.getItem("userData")) || null
@@ -46,6 +48,8 @@ const App = () => {
         <Route path="/TopNavbar" element={<TopNavbar/>}/>
         <Route path="/TakeAttendance" element={<TakeAttendance/>}/>
         <Route path="/CameraTest" element={<CameraTest/>}/>
+        <Route path="/LogAdmin" element={<LogAdmin/>} />
+        <Route path="/LogTableContent" element={<LogTableContent/>}/>
       </Routes>
     </div>
   );
