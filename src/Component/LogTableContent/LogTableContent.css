@@ -1,34 +1,21 @@
-/* .log-content-heading{
-    display: flex;
-    justify-content:space-evenly;
-    font-size: 18px;
-    font-weight: 600;
-    color: #0b1e47;
-    margin-bottom: 10px;
-    font-family: 'Poppins', sans-serif;
-    /*padding: 10px;
-    
+.status-active {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
-.log-entry{
-    display: flex;
-    font-size: 16px;
-    font-weight: 500;
-    color: #0b1e47;
-    margin-bottom: 10px;
-    font-family: 'Poppins', sans-serif;
-    gap: 3rem;
-    justify-content:center;
-} */
-.log-table{
-    display: flex;
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid gray;
-    /* overflow-y: scroll; */
-    align-items: center;  
-    padding: 10px;
-    gap: 2rem;
-}
-.table-username{
-    display: flex;
+
+.status-inactive {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }

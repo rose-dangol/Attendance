@@ -92,7 +92,7 @@ const Dashboard = () => {
               <div className="dashboard-icon">
                 <HomeIcon />
               </div>
-              <div className="dashboard-menu-data">Home</div>
+              <div className="dashboard-menu-data"><Link to="">Home</Link></div>
             </div>
             <div className="dashboard-menu">
               <div className="dashboard-icon">
@@ -110,7 +110,7 @@ const Dashboard = () => {
               <div className="dashboard-icon">
                 <PersonAddAltIcon />
               </div>
-              <div className="dashboard-menu-data">Add New User</div>
+              <div className="dashboard-menu-data"><Link to="/register">Add New User</Link></div>
             </div>
           </div>
         </div>
