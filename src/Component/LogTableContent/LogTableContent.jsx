@@ -3,9 +3,12 @@ import "./LogTableContent.css";
 const LogTableContent = () => {
   return (
     <>
-      <tr>
+      <tr >
         <td>Prashant Shrestha</td>
-        <td>Admin</td>
+        <td>
+          <span className="log-role">
+            Admin
+            </span></td>
         <td>2024-01-15</td>
         <td>09:30 AM</td>
         <td>
@@ -14,7 +17,7 @@ const LogTableContent = () => {
       </tr>
       <tr>
         <td>Rose Dangol</td>
-        <td>Student</td>
+        <td className="log-role">Student</td>
         <td>2024-01-15</td>
         <td>09:00 AM</td>
         <td>
@@ -32,7 +35,7 @@ const LogTableContent = () => {
       </tr>
       <tr>
         <td>Saya Bogati</td>
-        <td>Student</td>
+        <td className="log-role">Student</td>
         <td>2024-01-15</td>
         <td>10:30 AM</td>
         <td>

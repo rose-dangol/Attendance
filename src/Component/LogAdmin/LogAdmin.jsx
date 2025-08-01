@@ -77,8 +77,8 @@ const LogAdmin = () => {
                       color: "#f44336",
                     },
                   ]}
-                  width={600}
-                  height={400}
+                  width={500}
+                  height={350}
                 />
               </div>
             </div>

@@ -55,10 +55,11 @@
 }
 
 /* CENTER AREA */
-.center-content {
+.center-content-take-attendance {
   display: flex;
   justify-content: space-around;
   /* background-color: red; */
+  background: transparent;
   margin-top: 20px;
   height: 100%;
 }

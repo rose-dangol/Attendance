@@ -92,7 +92,7 @@ const Dashboard = () => {
               <div className="dashboard-icon">
                 <HomeIcon />
               </div>
-              <div className="dashboard-menu-data"><Link to="">Home</Link></div>
+              <div className="dashboard-menu-data"><Link to="/">Home</Link></div>
             </div>
             <div className="dashboard-menu">
               <div className="dashboard-icon">
