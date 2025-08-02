@@ -11,6 +11,7 @@ import TakeAttendance from "./Component/TakeAttendance/TakeAttendance";
 import CameraTest from "./Component/CameraTest/CameraTest";
 import LogAdmin from "./Component/LogAdmin/LogAdmin";
 import LogTableContent from "./Component/LogTableContent/LogTableContent";
+import AddNewUser from "./Component/AddNewUser/AddNewUser";
 const App = () => {
   // const [userData, setUserData] = useState(
   //   () => JSON.parse(localStorage.getItem("userData")) || null
@@ -50,6 +51,7 @@ const App = () => {
         <Route path="/CameraTest" element={<CameraTest/>}/>
         <Route path="/LogAdmin" element={<LogAdmin/>} />
         <Route path="/LogTableContent" element={<LogTableContent/>}/>
+        <Route path="/AddNewUser" element={<AddNewUser/>}/>
       </Routes>
     </div>
   );

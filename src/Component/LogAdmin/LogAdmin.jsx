@@ -69,12 +69,12 @@ const LogAdmin = () => {
                     {
                       data: [30, 25, 23, 28, 22, 27],
                       label: "Present",
-                      color: "#4caf50",
+                      color: "#240029",
                     },
                     {
                       data: [3, 5, 7, 2, 8, 3],
                       label: "Absent",
-                      color: "#f44336",
+                      color: "#EF4444",
                     },
                   ]}
                   width={500}

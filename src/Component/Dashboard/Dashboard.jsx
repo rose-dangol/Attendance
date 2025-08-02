@@ -8,6 +8,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import AddAPhotoIcon from "@mui/icons-material/AddAPhoto";
 import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
 import PersonAddAltIcon from "@mui/icons-material/PersonAddAlt";
+import LoginOutlinedIcon from '@mui/icons-material/LoginOutlined';
 
 // toggle icons
 import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
@@ -110,7 +111,7 @@ const Dashboard = () => {
               <div className="dashboard-icon">
                 <PersonAddAltIcon />
               </div>
-              <div className="dashboard-menu-data"><Link to="/register">Add New User</Link></div>
+              <div className="dashboard-menu-data"><Link to="/addNewUser">Add New User</Link></div>
             </div>
           </div>
         </div>
@@ -134,7 +135,7 @@ const Dashboard = () => {
           </div> */}
           {/* <Link></Link> */}
           <div className="dashboard-logout" onClick={(e) => handleLogout(e)}>
-            <i className="fa-solid fa-arrow-right-from-bracket"></i> LogOut
+            <LoginOutlinedIcon/> LogOut
           </div>
           {/* <button className="dashboard-logout">
             <a href="./Login">

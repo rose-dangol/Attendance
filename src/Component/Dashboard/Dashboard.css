@@ -1,3 +1,6 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
 .dashboard-container{
     padding-left: 20px;
     padding-right: 20px;
@@ -84,7 +87,7 @@
     gap: 1.5rem;
     height: 280px;
     /* justify-content: center; */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
     font-size: 15px;
 }
 .dashboard-menu{
@@ -135,9 +138,15 @@
     color: #140E32;
     text-decoration: none;
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    /* justify-content: center; */
 }
 .dashboard-logout:hover{
     color: red;
+    
 }
 .dashboard-logout i{
     margin-right: 10px;

@@ -1,0 +1,162 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+.add-new-user-container{
+    display: flex;
+}
+.add-new-user-main-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.add-new-user-center{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* background-color: #eef1fa; */
+    align-self: center;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    margin-top: 20px;
+}
+.add-new-user-pageTitle{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    align-self: flex-start;
+    gap: 1rem;
+}
+.add-new-user-titleGroup{
+    display: flex;
+    flex-direction: column;
+    
+}
+.add-new-user-title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+.add-new-user-subtitle{
+    font-size: 16px;
+    color: #666;
+}   
+.add-new-user-form{
+    width: 100%;
+    height: calc(100% - 220px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #FAFAFA;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.14);
+}
+.add-new-user-formHeading{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+.add-new-user-formTitle{
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+.add-new-user-formSubtitle{
+    font-size: 14px;
+    color: #666;
+}
+.add-new-user-formInputs{
+    display: flex;
+    flex-direction: column;
+    background-color: #FAFAFA;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+    /* box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); */
+
+}
+.form-row {
+  display: flex;
+  gap: 2rem; /* space between Name and User ID */
+  width: 100%;
+}
+.half-width {
+  flex: 1;
+}
+.form-inputLabel{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.label-icon{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 5px;
+    width: 80%;
+}
+.add-new-user-label{
+    font-size: 14px;
+    color: #2f0b16;
+    font-weight: 550;
+   
+}
+.add-new-user-input{
+    /* width: 300px; */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    width: 87%;
+}
+
+.email-input, .password-input{
+    width: 90%;
+}
+.add-new-user-submitButton{
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color:#051A3A; /* Green */
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    height: 50px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+}
+.add-new-user-cancelButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color:#FFFFFF; /* Green */
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    height: 50px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.14);
+}
+
+.form-buttons{
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 15px;
+}

@@ -36,7 +36,7 @@ const Home = () => {
                   }}
                 />
               </div>
-              <div className="stats-box-number">1234</div>
+              <div className="stats-box-number">34</div>
               <div className="stats-box-title">Total Students</div>
             </div>
             <div className="stats-box">
@@ -50,7 +50,7 @@ const Home = () => {
                     padding: "4px",
                   }}/>
               </div>
-              <div className="stats-box-number">1234</div>
+              <div className="stats-box-number">25</div>
               <div className="stats-box-title">Present Students</div>
             </div>
             <div className="stats-box">
@@ -66,7 +66,7 @@ const Home = () => {
                   }}
                 />
               </div>
-              <div className="stats-box-number">1234</div>
+              <div className="stats-box-number">5</div>
               <div className="stats-box-title">Students on Leave</div>
             </div>
             <div className="stats-box">
@@ -82,7 +82,7 @@ const Home = () => {
                   }}
                 />
               </div>
-              <div className="stats-box-number">1234</div>
+              <div className="stats-box-number">88%</div>
               <div className="stats-box-title">Productivity</div>
             </div>
           </div>
