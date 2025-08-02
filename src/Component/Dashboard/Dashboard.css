@@ -151,3 +151,7 @@
 .dashboard-logout i{
     margin-right: 10px;
 }
+.dashboard-menu Link{
+    text-decoration: none;
+    color: #140E32;
+}

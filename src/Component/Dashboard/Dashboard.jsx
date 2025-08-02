@@ -93,25 +93,25 @@ const Dashboard = () => {
               <div className="dashboard-icon">
                 <HomeIcon />
               </div>
-              <div className="dashboard-menu-data"><Link to="/">Home</Link></div>
+              <div className="dashboard-menu-data"><Link to="/" style={{ textDecoration: 'none', color: '#140E32' }}>Home</Link></div>
             </div>
             <div className="dashboard-menu">
               <div className="dashboard-icon">
                 <AddAPhotoIcon />
               </div>
-              <div className="dashboard-menu-data"><Link to="/TakeAttendance">Take Attendance</Link></div>
+              <div className="dashboard-menu-data"><Link to="/TakeAttendance" style={{ textDecoration: 'none', color: '#140E32' }}>Take Attendance</Link></div>
             </div>
             <div className="dashboard-menu">
               <div className="dashboard-icon">
                 <ReceiptLongIcon />
               </div>
-              <div className="dashboard-menu-data"><Link to="/logAdmin">Attendance Log</Link></div>
+              <div className="dashboard-menu-data"><Link to="/logAdmin" style={{ textDecoration: 'none', color: '#140E32' }}>Attendance Log</Link></div>
             </div>
             <div className="dashboard-menu">
               <div className="dashboard-icon">
                 <PersonAddAltIcon />
               </div>
-              <div className="dashboard-menu-data"><Link to="/addNewUser">Add New User</Link></div>
+              <div className="dashboard-menu-data"><Link to="/addNewUser" style={{ textDecoration: 'none', color: '#140E32' }}>Add New User</Link></div>
             </div>
           </div>
         </div>
