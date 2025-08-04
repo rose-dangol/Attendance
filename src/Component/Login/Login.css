@@ -9,7 +9,7 @@
   width: 850px;
   border-radius: 20px;
   overflow: hidden;
-    border:1px solid #7a67a9
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.18);
 }
 
 .LoginRight{
