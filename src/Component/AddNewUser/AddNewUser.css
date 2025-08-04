@@ -19,7 +19,7 @@
     align-items: center;
     width: 60%;
     height: 100%;
-    margin-top: 20px;
+    margin-top: 16px;
 }
 .add-new-user-pageTitle{
     display: flex;
@@ -44,7 +44,7 @@
 }   
 .add-new-user-form{
     width: 100%;
-    height: calc(100% - 220px);
+    height: calc(100% - 166px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,6 +117,9 @@
 
 .email-input, .password-input{
     width: 90%;
+}
+.role-input{
+    width: 92%;
 }
 .add-new-user-submitButton{
     width: 50%;
