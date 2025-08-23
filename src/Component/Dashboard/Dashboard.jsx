@@ -45,12 +45,15 @@ const Dashboard = () => {
   //     setLoggedUSer(userData.fullName);
   //   }
   //     console.log(loggedUSer);
+  // let userData,username;
+  const [username, setUsername] = useState("");
   useEffect(() => {
     const userData = JSON.parse(localStorage.getItem("userData"));
     if (userData && userData.fullName) {
       setLoggedUSer(userData.fullName);
-      // console.log(userData);
-      setTimeout(() => console.log(userData.fullName), 500);
+      // console.log(userData); 
+      setUsername(userData.fullName);
+      setTimeout(() => console.log(userData), 500);
     }
   }, []);
 
@@ -144,6 +147,7 @@ const Dashboard = () => {
           </button> */}
           {/* <button className="dashboard-logout"><Link to="../Login"><i class="fa-solid fa-arrow-right-from-bracket"></i> LogOut</Link></button> */}
           {/* <Link to="../Login" className="dashboard-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>LogOut</Link> */}
+          <div style={{color:"black"}}>{username}</div>
         </div>
       </div>
     </>

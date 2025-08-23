@@ -12,6 +12,7 @@ import CameraTest from "./Component/CameraTest/CameraTest";
 import LogAdmin from "./Component/LogAdmin/LogAdmin";
 import LogTableContent from "./Component/LogTableContent/LogTableContent";
 import AddNewUser from "./Component/AddNewUser/AddNewUser";
+import StudentHomepage from "./Component/StudentHomepage/StudentHomepage";
 const App = () => {
   // const [userData, setUserData] = useState(
   //   () => JSON.parse(localStorage.getItem("userData")) || null
@@ -52,6 +53,7 @@ const App = () => {
         <Route path="/LogAdmin" element={<LogAdmin/>} />
         <Route path="/LogTableContent" element={<LogTableContent/>}/>
         <Route path="/AddNewUser" element={<AddNewUser/>}/>
+        <Route path="/StudentHomepage" element={<StudentHomepage/>}/>
       </Routes>
     </div>
   );

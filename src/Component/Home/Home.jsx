@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import Dashboard from "../Dashboard/Dashboard";
 import TopNavbar from "../TopNavbar/TopNavbar";
@@ -9,6 +9,18 @@ import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 import LocalActivityIcon from '@mui/icons-material/LocalActivity';
 
 const Home = () => {
+    const [studentCount, setStudentCount] = useState(0);
+    const [presentCount, setPresentCount] = useState(0);
+    useEffect(() => {
+      fetch("http://localhost:5000/api/auth/getAll")
+        .then((response) => response.json())
+        .then((data) => {
+          setStudentCount(data.length);
+          const present = data.filter((s) => s.status === "present").length;
+          setPresentCount(present);
+        })
+        .catch((error) => console.error("Error fetching student count:", error));
+    }, []);
   return (
     <div className="home-container">
       <Dashboard />
@@ -36,7 +48,7 @@ const Home = () => {
                   }}
                 />
               </div>
-              <div className="stats-box-number">34</div>
+              <div className="stats-box-number">{studentCount}</div>
               <div className="stats-box-title">Total Students</div>
             </div>
             <div className="stats-box">
@@ -50,7 +62,7 @@ const Home = () => {
                     padding: "4px",
                   }}/>
               </div>
-              <div className="stats-box-number">25</div>
+              <div className="stats-box-number">{presentCount}</div>
               <div className="stats-box-title">Present Students</div>
             </div>
             <div className="stats-box">

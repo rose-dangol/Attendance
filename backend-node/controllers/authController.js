@@ -96,6 +96,13 @@ export const addNewUser = async (req, res) => {
     return res.status(500).send("Something went wrong. Please try again later.");
   }
 };
+export const getUserById = async(  req, res) => {
+  try {
+    
+  } catch (error) {
+    return res.status(500).send(error);
+  }
+};
 /*
   try{
     const name = req.body.username;
