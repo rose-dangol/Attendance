@@ -11,9 +11,10 @@ import TopNavbar from "../TopNavbar/TopNavbar";
 
 const StudentHomepage = () => {
   return (
-    <div className="dashboard">
+    <div className="StudentHomepage">
+      <Dashboard/>
+    <div className="StudentHomepage-center">
       <Header />
-
       <div className="cards-row">
         <StatusCard
           title="Today's Status"
@@ -39,6 +40,7 @@ const StudentHomepage = () => {
         <RecentAttendance />
         <Notifications />
       </div>
+    </div>
     </div>
   )
 }

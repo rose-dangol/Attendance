@@ -6,23 +6,22 @@
     display: flex;
     flex-direction: column;
 } */
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: yellow;
+.StudentHomepage{
+    display: flex;
 }
-
 .app {
   padding: 20px;
 }
-.dashboard {
-  max-width: 1200px;
-  margin: auto;
+.StudentHomepage-center {
+  width: 100%;
+  /* margin: auto; */
+  padding: 10px;
+  height: 100%;
+  background-color: #F6F6F8;
 }
 
 .header {
-  background: white;
+  /* background: rgb(154, 99, 99); */
   padding: 20px;
   border-radius: 12px;
   display: flex;
@@ -92,8 +91,9 @@ body {
   padding: 20px;
   border-radius: 12px;
   height: 55%;
-
-  overflow-y: auto;
+}
+.notifications{
+    overflow-y: auto;
 }
 .recent-attendance table {
   width: 100%;
