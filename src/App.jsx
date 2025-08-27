@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { Navigate } from "react-router-dom";
 import Login from "../src/Component/Login/Login";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Register from "./Component/Register/Register";
@@ -42,6 +43,12 @@ const App = () => {
         ) : (
           <Route path="/" element={<Login />} />
         )}
+        {userData ? (
+          <Route path="/" element={<StudentHomepage />} />
+        ) : (
+          <Route path="/" element={<Login />} />
+        )}
+        
         {/* <Route path="/" element={<Home />} /> */}
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
