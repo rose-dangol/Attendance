@@ -1,3 +1,6 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
 .dashboard-container{
     padding-left: 20px;
     padding-right: 20px;
@@ -11,7 +14,7 @@
     justify-content: space-between;
     /* margin-left: 5px; */
     /* margin-top: 5px; */
-    background-color: #FAFAFA;
+    background-color: #FAFAFA ;
     color: #140E32;
     font-family: "Poppins", sans-serif;
     transition: all 700ms ease-in-out;
@@ -84,7 +87,7 @@
     gap: 1.5rem;
     height: 280px;
     /* justify-content: center; */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
     font-size: 15px;
 }
 .dashboard-menu{
@@ -135,10 +138,20 @@
     color: #140E32;
     text-decoration: none;
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    /* justify-content: center; */
 }
 .dashboard-logout:hover{
     color: red;
+    
 }
 .dashboard-logout i{
     margin-right: 10px;
+}
+.dashboard-menu Link{
+    text-decoration: none;
+    color: #140E32;
 }

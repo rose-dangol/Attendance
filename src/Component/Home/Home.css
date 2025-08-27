@@ -1,3 +1,6 @@
+*{
+    font-family: "Poppins", sans-serif !important;
+}
 body{
     background-color: #FFFFFF;
 }
@@ -16,7 +19,7 @@ body{
 .center-heading{
   /* margin: 10px; */
 
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   padding-left: 30px;
   color: #140E32;
   margin-bottom:20px ;
@@ -31,7 +34,7 @@ body{
 .center-heading p{
     font-size: 18px;
     margin: 0px;
-    font-weight: lighter;
+    font-weight: 450;
     color: #140e3280;
 }
 .center-stats{

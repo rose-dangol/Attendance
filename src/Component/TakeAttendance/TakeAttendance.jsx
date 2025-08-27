@@ -5,7 +5,7 @@ import Dashboard from "../Dashboard/Dashboard";
 import CameraAltOutlinedIcon from "@mui/icons-material/CameraAltOutlined";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import BoltOutlinedIcon from "@mui/icons-material/BoltOutlined";
-import CameraEnhanceOutlinedIcon from '@mui/icons-material/CameraEnhanceOutlined';
+import CameraEnhanceOutlinedIcon from "@mui/icons-material/CameraEnhanceOutlined";
 
 const TakeAttendance = () => {
   const [hasCamera, setHasCamera] = useState(null);
@@ -30,11 +30,16 @@ const TakeAttendance = () => {
   const [cameraStarted, setCameraStarted] = useState(false);
 
   const handleTakeAttendanceClick = async () => {
+    console.log(cameraStarted);
+
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-      if (videoRef.current) {
+
+      if (videoRef?.current) {
         videoRef.current.srcObject = stream;
         setCameraStarted(true);
+        console.log(cameraStarted);
+        console.log("hello camera");
       }
     } catch (error) {
       console.error("Camera access error:", error);
@@ -59,10 +64,10 @@ const TakeAttendance = () => {
               {hasCamera === false && <span>🔴 No camera</span>}
             </div>
           </div>
-          <div className="center-content">
+          <div className="center-content-take-attendance">
             <div className="left-container">
               <div className="initialize-camera-container">
-                <div className="initialize-camera">
+                <div className="initialize-camera" style={{display: cameraStarted ? "none" : "flex"}}>
                   <div className="camera-icon">
                     <CameraAltOutlinedIcon
                       sx={{
@@ -78,26 +83,28 @@ const TakeAttendance = () => {
                 </div>
                 <div
                   className="take-attendance-btn"
+                  style={{display: cameraStarted ? "none" : "flex"}}
                   onClick={handleTakeAttendanceClick}
                 >
                   <CameraEnhanceOutlinedIcon sx={{ fontSize: 28 }} /> Take
                   Attendance
                 </div>
                 {/* Camera preview */}
-                {cameraStarted && (
-                  <video
-                    ref={videoRef}
-                    autoPlay
-                    playsInline
-                    style={{
-                      width: "100%",
-                      maxWidth: "500px",
-                      marginTop: "20px",
-                      border: "2px solid red",
-                      background: "black",
-                    }}
-                  />
-                )}
+                <video
+                  ref={videoRef}
+                  autoPlay
+                  playsInline
+                  style={{
+                    width: "100%",
+                    maxWidth: "500px",
+                    marginTop: "20px",
+                    marginBottom:"3 5px",
+                    border: "2px solid red",
+                    background: "black",
+                    zIndex: "10000",
+                    display: cameraStarted ? "block" : "none",
+                  }}
+                />
                 <div className="subtext-section">
                   <div className="face-detect">
                     <VisibilityOutlinedIcon />
@@ -125,7 +132,10 @@ const TakeAttendance = () => {
                 />
               </div>
               <div className="right-userDetails">
-                <div className="username typing-text typing-delay-1">User: Rose Dangol <br/>Email: rose@gmail.com <br/> User ID: 28684</div>
+                <div className="username typing-text typing-delay-1">
+                  User: Rose Dangol <br />
+                  Email: rose@gmail.com <br /> User ID: 28684
+                </div>
                 {/* <div className="gmail typing-text typing-delay-2">Email: rose@gmail.com</div>
                 <div className="userid typing-text typing-delay-3">User ID: 28684</div> */}
               </div>
