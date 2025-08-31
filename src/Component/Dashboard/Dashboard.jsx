@@ -47,15 +47,19 @@ const Dashboard = () => {
   //     console.log(loggedUSer);
   // let userData,username;
   const [username, setUsername] = useState("");
+   const [userRole, setUserRole] = useState("");
   useEffect(() => {
     const userData = JSON.parse(localStorage.getItem("userData"));
     if (userData && userData.fullName) {
       setLoggedUSer(userData.fullName);
-      // console.log(userData); 
+      setUserRole(userData.role);
+       
       setUsername(userData.fullName);
       setTimeout(() => console.log(userData), 500);
     }
   }, []);
+ console.log(userRole);
+  
 
   return (
     <>
@@ -110,7 +114,7 @@ const Dashboard = () => {
               </div>
               <div className="dashboard-menu-data"><Link to="/logAdmin" style={{ textDecoration: 'none', color: '#140E32' }}>Attendance Log</Link></div>
             </div>
-            <div className="dashboard-menu">
+            <div className={userRole?.toLowerCase().includes("student")?"hidden":"dashboard-menu"}>
               <div className="dashboard-icon">
                 <PersonAddAltIcon />
               </div>
@@ -147,7 +151,8 @@ const Dashboard = () => {
           </button> */}
           {/* <button className="dashboard-logout"><Link to="../Login"><i class="fa-solid fa-arrow-right-from-bracket"></i> LogOut</Link></button> */}
           {/* <Link to="../Login" className="dashboard-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>LogOut</Link> */}
-          <div style={{color:"black"}}>{username}</div>
+          {/* <div style={{color:"black"}}>{username}, {userRole}</div> */}
+          
         </div>
       </div>
     </>

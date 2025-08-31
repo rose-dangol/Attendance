@@ -5,24 +5,30 @@ import TopNavbar from "../TopNavbar/TopNavbar";
 
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
-import AutoGraphIcon from '@mui/icons-material/AutoGraph';
-import LocalActivityIcon from '@mui/icons-material/LocalActivity';
+import AutoGraphIcon from "@mui/icons-material/AutoGraph";
+import LocalActivityIcon from "@mui/icons-material/LocalActivity";
+import StudentHomepage from "../StudentHomepage/StudentHomepage";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Home = () => {
-    const [studentCount, setStudentCount] = useState(0);
-    const [presentCount, setPresentCount] = useState(0);
-    useEffect(() => {
-      fetch("http://localhost:5000/api/auth/getAll")
-        .then((response) => response.json())
-        .then((data) => {
-          setStudentCount(data.length);
-          const present = data.filter((s) => s.status === "present").length;
-          setPresentCount(present);
-        })
-        .catch((error) => console.error("Error fetching student count:", error));
-    }, []);
-  return (
-    <div className="home-container">
+  const [studentCount, setStudentCount] = useState(0);
+  const [presentCount, setPresentCount] = useState(0);
+  const navigate = useNavigate();
+  useEffect(() => {
+    fetch("http://localhost:5000/api/auth/getAll")
+      .then((response) => response.json())
+      .then((data) => {
+        setStudentCount(data.length);
+        const present = data.filter((s) => s.status === "present").length;
+        setPresentCount(present);
+      })
+      .catch((error) => console.error("Error fetching student count:", error));
+  }, []);
+  const userData = JSON.parse(localStorage.getItem("userData"));
+  console.log(userData?.role);
+  return (<>
+    {userData?.role==="admin"?
+    (<div className="home-container">
       <Dashboard />
       <div className="main-content">
         <TopNavbar />
@@ -35,7 +41,7 @@ const Home = () => {
           </div>
           {/* 192 x140 */}
           <div className="center-stats">
-            <div className="stats-box">
+            <div className="stats-box" >
               <div className="stats-box-icon">
                 <PeopleAltIcon
                   sx={{
@@ -49,21 +55,23 @@ const Home = () => {
                 />
               </div>
               <div className="stats-box-number">{studentCount}</div>
-              <div className="stats-box-title">Total Students</div>
+              <div className="stats-box-title" onClick={()=>navigate("/AllUser")}>Total Students</div>
             </div>
             <div className="stats-box">
               <div className="stats-box-icon">
-                <HowToRegIcon sx={{
+                <HowToRegIcon
+                  sx={{
                     fontSize: 40,
                     border: "1px solid black",
                     backgroundColor: "black",
                     color: "white",
                     borderRadius: "8px",
                     padding: "4px",
-                  }}/>
+                  }}
+                />
               </div>
               <div className="stats-box-number">{presentCount}</div>
-              <div className="stats-box-title">Present Students</div>
+              <div className="stats-box-title" onClick={()=>navigate("/PresentUser")}>Present Students</div>
             </div>
             <div className="stats-box">
               <div className="stats-box-icon">
@@ -79,7 +87,7 @@ const Home = () => {
                 />
               </div>
               <div className="stats-box-number">5</div>
-              <div className="stats-box-title">Students on Leave</div>
+              <div className="stats-box-title" onClick={()=>navigate("/LeaveUser")}>Students on Leave</div>
             </div>
             <div className="stats-box">
               <div className="stats-box-icon">
@@ -98,12 +106,11 @@ const Home = () => {
               <div className="stats-box-title">Productivity</div>
             </div>
           </div>
-          <div className="center-bargraph">
-            
-          </div>
+          <div className="center-bargraph"></div>
         </div>
       </div>
-    </div>
+    </div>):<StudentHomepage/>}
+    </>
   );
 };
 

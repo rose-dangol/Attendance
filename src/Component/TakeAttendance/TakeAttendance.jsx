@@ -9,6 +9,7 @@ import CameraEnhanceOutlinedIcon from "@mui/icons-material/CameraEnhanceOutlined
 
 const TakeAttendance = () => {
   const [hasCamera, setHasCamera] = useState(null);
+  const userData = JSON.parse(localStorage.getItem("userData"));
   useEffect(() => {
     const checkCamera = async () => {
       try {
@@ -133,8 +134,8 @@ const TakeAttendance = () => {
               </div>
               <div className="right-userDetails">
                 <div className="username typing-text typing-delay-1">
-                  User: Rose Dangol <br />
-                  Email: rose@gmail.com <br /> User ID: 28684
+                  User: {userData?.username} <br />
+                  Email:{userData?.email} <br /> User ID: {userData?._id}
                 </div>
                 {/* <div className="gmail typing-text typing-delay-2">Email: rose@gmail.com</div>
                 <div className="userid typing-text typing-delay-3">User ID: 28684</div> */}

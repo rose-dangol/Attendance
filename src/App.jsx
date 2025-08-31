@@ -14,6 +14,10 @@ import LogAdmin from "./Component/LogAdmin/LogAdmin";
 import LogTableContent from "./Component/LogTableContent/LogTableContent";
 import AddNewUser from "./Component/AddNewUser/AddNewUser";
 import StudentHomepage from "./Component/StudentHomepage/StudentHomepage";
+import TeacherDashboard from "./Component/TeacherDashboard/TeacherDashboard";
+import AllUser from "./Component/AllUser/AllUser";
+import PresentStudent from "./Component/AllUser/PresentStudent";
+import LeaveStudent from "./Component/AllUser/LeaveStudent";
 const App = () => {
   // const [userData, setUserData] = useState(
   //   () => JSON.parse(localStorage.getItem("userData")) || null
@@ -33,7 +37,7 @@ const App = () => {
   // }, 200);
 
   const userData = JSON.parse(localStorage.getItem("userData"));
-  console.log(userData)
+  
 
   return (
     <div>
@@ -49,7 +53,7 @@ const App = () => {
           <Route path="/" element={<Login />} />
         )}
         
-        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/AdminDashboard" element={<AdminDashboard />} />
@@ -61,6 +65,10 @@ const App = () => {
         <Route path="/LogTableContent" element={<LogTableContent/>}/>
         <Route path="/AddNewUser" element={<AddNewUser/>}/>
         <Route path="/StudentHomepage" element={<StudentHomepage/>}/>
+        <Route path="/TeacherDashboard" element={<TeacherDashboard/>}/>
+        <Route path="/AllUSer" element={<AllUser/>}/>
+        <Route path="/PresentUser" element={<PresentStudent/>}/>
+        <Route path="/LeaveUser" element={<LeaveStudent/>}/>
       </Routes>
     </div>
   );

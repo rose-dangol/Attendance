@@ -1,0 +1,72 @@
+.Teacherdashboard-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+.welcome-card {
+  background: #f4f6f9;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.stat-card {
+  flex: 1;
+  background: #e9f2ff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.attendance-card,
+.notifications-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background: #f0f0f0;
+}
+
+.present {
+  color: green;
+  font-weight: bold;
+}
+
+.absent {
+  color: red;
+  font-weight: bold;
+}
+
+.notifications-card ul {
+  list-style: disc;
+  padding-left: 20px;
+}
