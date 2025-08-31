@@ -80,7 +80,7 @@ const Login = () => {
             className="LoginRegisterButton"
             onClick={(e) => handleClick(e)}
           >
-            Register
+            Resgister
           </button>
         </div>
       </div>

@@ -1,6 +1,8 @@
 // "If someone tries to register, here's what we check, save, or return."
 
 import User from "../models/User.js";
+// import Attendance from "../models/attendance.js";
+// import Class from "../models/class.js";
 import bcrypt from "bcrypt";
 
 export const register = async (req, res) => {
@@ -103,6 +105,13 @@ export const getUserById = async(  req, res) => {
     return res.status(500).send(error);
   }
 };
+// export const newAttendance = new Attendance({
+//   userId: someUserId,
+//   date: new Date(),
+//   checkInTime: new Date(),
+//   status: "Present"
+// });
+// await newAttendance.save();
 /*
   try{
     const name = req.body.username;

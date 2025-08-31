@@ -1,7 +1,4 @@
-* {
-  /* box-sizing: border-box; */
-  /* font-family: sans-serif; */
-}
+
 
 .take-attendance-container {
   display: flex;
@@ -143,6 +140,10 @@
 .right-gif{
   border-radius: 20px;
 }
+.username{
+  width:100% !important;
+  margin-left: 79px;
+}
 .right-userDetails{
   padding: 10px;
   margin-top: 10px;
@@ -155,10 +156,9 @@
   gap: .5rem;
   font-size: 16px;
   font-family: "Poppins", sans-serif;
-  /* width: 275px; */
   position: relative;
   right: 65px;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* white-space:nowrap; */
   /* left: 0; */
   /* left: -100%; */
@@ -166,7 +166,7 @@
 
 
 .typing-text {
-  width: 0;
+  width: 100%;
   overflow: hidden;
   white-space: nowrap;
   border-right: 2px solid black;
@@ -181,6 +181,7 @@
 .typing-delay-1 {
   animation-delay: 0s;
   color: #140E32;
+  width: 100%;
 }
 
 /* .typing-delay-2 {
