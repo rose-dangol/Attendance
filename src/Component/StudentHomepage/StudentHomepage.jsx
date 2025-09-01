@@ -11,6 +11,8 @@ import TopNavbar from "../TopNavbar/TopNavbar";
 
 
 const StudentHomepage = () => {
+  const userData = JSON.parse(localStorage.getItem("userData"));
+  console.log(userData?.role);
   return (
     <div className="StudentHomepage">
       <Dashboard/>
