@@ -7,6 +7,7 @@ import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
 import AutoGraphIcon from "@mui/icons-material/AutoGraph";
 import LocalActivityIcon from "@mui/icons-material/LocalActivity";
+
 import StudentHomepage from "../StudentHomepage/StudentHomepage";
 import { Navigate, useNavigate } from "react-router-dom";
 
@@ -27,7 +28,7 @@ const Home = () => {
   const userData = JSON.parse(localStorage.getItem("userData"));
   console.log(userData?.role);
   return (<>
-    {userData?.role==="admin"?
+    {userData?.role==="admin"||userData?.role==="teacher"?
     (<div className="home-container">
       <Dashboard />
       <div className="main-content">
